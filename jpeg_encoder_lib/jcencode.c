@@ -1,24 +1,24 @@
 #include "jcerror.h"
 #include "jcfunctions.h"
 
-GLOBAL(UINT8) jc_sequential_dummy(jcinfo_t *jc_info,UINT8 toggle)
+GLOBAL(unsigned char) jc_sequential_dummy(jcinfo_t *jc_info,unsigned char toggle)
 {
-	UINT8  err_val;
-	UINT8  components_in_scan;
-	UINT8  horizontal_sampling_factor,vertical_sampling_factor;
-	INT16  temp;
-	UINT16 i,j,k,l,m;
-	UINT16 horizontal_mcus,vertical_mcus;
-	UINT16 mcu_rows,mcu_cols;
-	UINT32 nmcu;
-	UINT8  *buffer;
-	UINT16 *qtbl;
-	INT16  *macro_block,*jpeg_coeff,*temp_buffer;
-	UINT32 *dc_count,*ac_count;
+	unsigned char  err_val;
+	unsigned char  components_in_scan;
+	unsigned char  horizontal_sampling_factor,vertical_sampling_factor;
+	short  temp;
+	unsigned short i,j,k,l,m;
+	unsigned short horizontal_mcus,vertical_mcus;
+	unsigned short mcu_rows,mcu_cols;
+	unsigned int nmcu;
+	unsigned char  *buffer;
+	unsigned short *qtbl;
+	short  *macro_block,*jpeg_coeff,*temp_buffer;
+	unsigned int *dc_count,*ac_count;
 	
-	UINT8 (* read_format)(jcstruct_t *s,UINT8 toggle);
-	void  (* advance_ptr_block)(jcstruct_t *s,UINT16 mcu_cols);
-	void  (* advance_ptr_row)(jcstruct_t *s,UINT16 mcu_rows);
+	unsigned char (* read_format)(jcstruct_t *s,unsigned char toggle);
+	void  (* advance_ptr_block)(jcstruct_t *s,unsigned short mcu_cols);
+	void  (* advance_ptr_row)(jcstruct_t *s,unsigned short mcu_rows);
 	
 	jcdata_l1_t *jcdata_l1;
 	jcdata_l3_t *jcdata_l3;
@@ -159,23 +159,23 @@ GLOBAL(UINT8) jc_sequential_dummy(jcinfo_t *jc_info,UINT8 toggle)
 
 /*******************************************************************************************/
 
-GLOBAL(UINT8) jc_sequential(jcinfo_t *jc_info,UINT8 toggle)
+GLOBAL(unsigned char) jc_sequential(jcinfo_t *jc_info,unsigned char toggle)
 {
-	UINT8  err_val;
-	UINT8  components_in_scan;
-	UINT8  horizontal_sampling_factor,vertical_sampling_factor;
-	INT16  temp;
-	UINT16 i,j,k,l,m;
-	UINT16 horizontal_mcus,vertical_mcus;
-	UINT16 mcu_rows,mcu_cols;
-	UINT32 nmcu;
-	UINT8  *buffer;
-	UINT16 *qtbl;
-	INT16  *macro_block,*jpeg_coeff,*temp_buffer;
+	unsigned char  err_val;
+	unsigned char  components_in_scan;
+	unsigned char  horizontal_sampling_factor,vertical_sampling_factor;
+	short  temp;
+	unsigned short i,j,k,l,m;
+	unsigned short horizontal_mcus,vertical_mcus;
+	unsigned short mcu_rows,mcu_cols;
+	unsigned int nmcu;
+	unsigned char  *buffer;
+	unsigned short *qtbl;
+	short  *macro_block,*jpeg_coeff,*temp_buffer;
 	
-	UINT8 (* read_format)(jcstruct_t *s,UINT8 toggle);
-	void  (* advance_ptr_block)(jcstruct_t *s,UINT16 mcu_cols);
-	void  (* advance_ptr_row)(jcstruct_t *s,UINT16 mcu_rows);
+	unsigned char (* read_format)(jcstruct_t *s,unsigned char toggle);
+	void  (* advance_ptr_block)(jcstruct_t *s,unsigned short mcu_cols);
+	void  (* advance_ptr_row)(jcstruct_t *s,unsigned short mcu_rows);
 	
 	jcdata_l1_t *jcdata_l1;
 	jcstruct_t *s;

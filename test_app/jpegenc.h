@@ -10,15 +10,6 @@
 #define NULL (void*)0
 #endif
 
-typedef char			INT8;
-typedef unsigned char	UINT8;
-
-typedef short			INT16;
-typedef unsigned short	UINT16;
-
-typedef int				INT32;
-typedef unsigned int	UINT32;
-
 #define 	JC_WRITE_HEADERS_SUCCESS	100
 #define 	JC_ENCODE_SUCCESS 			0
 
@@ -64,51 +55,51 @@ typedef unsigned int	UINT32;
 
 typedef struct jcinfo_t
 {
-	UINT8 jc_copy_method;
-	
-    UINT8 jc_terminate;
-    
-	//select input image_format
-	UINT8 jc_input_format;
-	
-	//specify quality factor (0 ... 100)
-	UINT8 jc_quality_factor;
-	
-	UINT8 jc_optimize;
-	
-	UINT8 jc_subsample;
-	
-	UINT32 jc_progress_indicator;
-	
-	//dimensions
-	UINT32 cols;
-	UINT32 rows;
-	
-	UINT8  *jc_input_buf;
-	UINT32 jc_input_buf_size;
-	
-	UINT8  *jc_output_buf;
-	UINT32 jc_output_buf_size;
-	
-	UINT32 l1_buf_size;
-	void *l1_buf;
-	UINT32 l3_buf_size;
-	void *l3_buf;
-	
-	void *opaque;//used for user defined structs,variables,etc
-	
+    unsigned char jc_copy_method;
+
+    unsigned char jc_terminate;
+
+    //select input image_format
+    unsigned char jc_input_format;
+
+    //specify quality factor (0 ... 100)
+    unsigned char jc_quality_factor;
+
+    unsigned char jc_optimize;
+
+    unsigned char jc_subsample;
+
+    unsigned int jc_progress_indicator;
+
+    //dimensions
+    unsigned int cols;
+    unsigned int rows;
+
+    unsigned char  *jc_input_buf;
+    unsigned int jc_input_buf_size;
+
+    unsigned char  *jc_output_buf;
+    unsigned int jc_output_buf_size;
+
+    unsigned int l1_buf_size;
+    void *l1_buf;
+    unsigned int l3_buf_size;
+    void *l3_buf;
+
+    void *opaque;//used for user defined structs,variables,etc
+
 } jcinfo_t;
 
 void jc_init_encode(jcinfo_t *jc_info);
 
 void jc_set_defaults(jcinfo_t *jc_info);
 
-UINT8 jc_write_headers(jcinfo_t *jc_info);
+unsigned char jc_write_headers(jcinfo_t *jc_info);
 
-UINT8 jc_encode(jcinfo_t *jc_info);
+unsigned char jc_encode(jcinfo_t *jc_info);
 
-void add_huffman_tables(jcinfo_t *jc_info,UINT8 table_selector,const UINT8 *nval,const UINT8 *val);
+void add_huffman_tables(jcinfo_t *jc_info,unsigned char table_selector,const unsigned char *nval,const unsigned char *val);
 
-void add_quantization_tables(jcinfo_t *jc_info,UINT8 table_selector,const UINT8 *qtbl);
+void add_quantization_tables(jcinfo_t *jc_info,unsigned char table_selector,const unsigned char *qtbl);
 
 #endif

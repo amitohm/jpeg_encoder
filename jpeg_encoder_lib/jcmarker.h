@@ -79,10 +79,10 @@
 
 #define		TEM_MARKER		0x01
 
-LOCAL(void) jc_put_next_marker(jcstruct_t *s,UINT8 val);
-LOCAL(UINT8) jc_put_dqt_marker(jcinfo_t *jc_info);
-LOCAL(UINT8) jc_put_dht_marker(jcinfo_t *jc_info);
-LOCAL(UINT8) jc_put_sof_marker(jcinfo_t *jc_info);
-LOCAL(UINT8) jc_put_sos_marker(jcinfo_t *jc_info);
+LOCAL(void) jc_put_next_marker(jcstruct_t *s,unsigned char val);
+LOCAL(unsigned char) jc_put_dqt_marker(jcinfo_t *jc_info);
+LOCAL(unsigned char) jc_put_dht_marker(jcinfo_t *jc_info);
+LOCAL(unsigned char) jc_put_sof_marker(jcinfo_t *jc_info);
+LOCAL(unsigned char) jc_put_sos_marker(jcinfo_t *jc_info);
 
 #endif

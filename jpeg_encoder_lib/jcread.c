@@ -2,12 +2,12 @@
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_400(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_400(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j,offset;
-	UINT8 *ptr0;
-	UINT8 *ptrY;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j,offset;
+	unsigned char *ptr0;
+	unsigned char *ptrY;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
@@ -34,12 +34,12 @@ GLOBAL(UINT8) jc_read_400(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_444(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_444(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j,offset;
-	UINT8 *ptr0,*ptr1,*ptr2;
-	UINT8 *ptrY,*ptrCb,*ptrCr;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j,offset;
+	unsigned char *ptr0,*ptr1,*ptr2;
+	unsigned char *ptrY,*ptrCb,*ptrCr;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
@@ -74,12 +74,12 @@ GLOBAL(UINT8) jc_read_444(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_444_420(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_444_420(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j,offset;
-	UINT8 *ptr0,*ptr1,*ptr2;
-	UINT8 *ptrY,*ptrCb,*ptrCr;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j,offset;
+	unsigned char *ptr0,*ptr1,*ptr2;
+	unsigned char *ptrY,*ptrCb,*ptrCr;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
@@ -126,12 +126,12 @@ GLOBAL(UINT8) jc_read_444_420(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_420(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_420(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j,offset;
-	UINT8 *ptr0,*ptr1,*ptr2;
-	UINT8 *ptrY,*ptrCb,*ptrCr;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j,offset;
+	unsigned char *ptr0,*ptr1,*ptr2;
+	unsigned char *ptrY,*ptrCb,*ptrCr;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
@@ -178,12 +178,12 @@ GLOBAL(UINT8) jc_read_420(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_422(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_422(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j,offset;
-	UINT8 *ptr0,*ptr1,*ptr2;
-	UINT8 *ptrY,*ptrCb,*ptrCr;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j,offset;
+	unsigned char *ptr0,*ptr1,*ptr2;
+	unsigned char *ptrY,*ptrCb,*ptrCr;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
@@ -229,12 +229,12 @@ GLOBAL(UINT8) jc_read_422(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_422_420(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_422_420(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j,offset;
-	UINT8 *ptr0,*ptr1,*ptr2;
-	UINT8 *ptrY,*ptrCb,*ptrCr;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j,offset;
+	unsigned char *ptr0,*ptr1,*ptr2;
+	unsigned char *ptrY,*ptrCb,*ptrCr;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
@@ -279,12 +279,12 @@ GLOBAL(UINT8) jc_read_422_420(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_uyvy(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_uyvy(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j,offset;
-	UINT8 *ptr0,*ptr1,*ptr2;
-	UINT8 *ptrY,*ptrCb,*ptrCr;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j,offset;
+	unsigned char *ptr0,*ptr1,*ptr2;
+	unsigned char *ptrY,*ptrCb,*ptrCr;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
@@ -331,13 +331,13 @@ GLOBAL(UINT8) jc_read_uyvy(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_rgb24(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_rgb24(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	INT32 t,r,g,b;
-	UINT32 i,j,offset;
-	UINT8 *ptr,*ptrY,*ptrCb,*ptrCr;
-	INT16 *rgb_coeff;
+	unsigned short mcu_cols,mcu_rows;
+	int t,r,g,b;
+	unsigned int i,j,offset;
+	unsigned char *ptr,*ptrY,*ptrCb,*ptrCr;
+	short *rgb_coeff;
 	
 	rgb_coeff = s->rgb_coeff;
 	
@@ -364,21 +364,21 @@ GLOBAL(UINT8) jc_read_rgb24(jcstruct_t *s,UINT8 toggle)
 			t >>= 15;
 			t = MIN(255,t);
 			t = MAX(0,t);
-			ptrY[(i<<3)+j] = (UINT8)t;
+			ptrY[(i<<3)+j] = (unsigned char)t;
 			
 			t = (r*rgb_coeff[3]) + (g*rgb_coeff[6]) + (b*rgb_coeff[4]);
 			t >>= 15;
 			t += 128;
 			t = MIN(255,t);
 			t = MAX(0,t);
-			ptrCb[(i<<3)+j] = (UINT8)t;
+			ptrCb[(i<<3)+j] = (unsigned char)t;
 			
 			t = (r*rgb_coeff[4]) + (g*rgb_coeff[7]) + (b*rgb_coeff[5]);
 			t >>= 15;
 			t += 128;
 			t = MIN(255,t);
 			t = MAX(0,t);
-			ptrCr[(i<<3)+j] = (UINT8)t;
+			ptrCr[(i<<3)+j] = (unsigned char)t;
 		}
 		ptr += offset;
 	}
@@ -390,13 +390,13 @@ GLOBAL(UINT8) jc_read_rgb24(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_rgb24_420(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_rgb24_420(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	INT32 t,r,g,b;
-	UINT32 i,j,offset;
-	UINT8 *ptr,*ptrY,*ptrCb,*ptrCr;
-	INT16 *rgb_coeff;
+	unsigned short mcu_cols,mcu_rows;
+	int t,r,g,b;
+	unsigned int i,j,offset;
+	unsigned char *ptr,*ptrY,*ptrCb,*ptrCr;
+	short *rgb_coeff;
 	
 	rgb_coeff = s->rgb_coeff;
 	
@@ -423,7 +423,7 @@ GLOBAL(UINT8) jc_read_rgb24_420(jcstruct_t *s,UINT8 toggle)
 			t >>= 15;
 			t = MIN(255,t);
 			t = MAX(0,t);
-			ptrY[(i<<4)+j] = (UINT8)t;
+			ptrY[(i<<4)+j] = (unsigned char)t;
 		}
 		ptr += offset;
 	}
@@ -446,14 +446,14 @@ GLOBAL(UINT8) jc_read_rgb24_420(jcstruct_t *s,UINT8 toggle)
 			t += 128;
 			t = MIN(255,t);
 			t = MAX(0,t);
-			ptrCb[(i<<3)+j] = (UINT8)t;
+			ptrCb[(i<<3)+j] = (unsigned char)t;
 			
 			t = (r*rgb_coeff[4]) + (g*rgb_coeff[7]) + (b*rgb_coeff[5]);
 			t >>= 15;
 			t += 128;
 			t = MIN(255,t);
 			t = MAX(0,t);
-			ptrCr[(i<<3)+j] = (UINT8)t;
+			ptrCr[(i<<3)+j] = (unsigned char)t;
 		}
 		ptr += offset;
 	}
@@ -465,11 +465,11 @@ GLOBAL(UINT8) jc_read_rgb24_420(jcstruct_t *s,UINT8 toggle)
 
 //*******************************************************************************************//
 
-GLOBAL(UINT8) jc_read_mb(jcstruct_t *s,UINT8 toggle)
+GLOBAL(unsigned char) jc_read_mb(jcstruct_t *s,unsigned char toggle)
 {
-	UINT16 mcu_cols,mcu_rows;
-	UINT32 i,j;
-	UINT8 *ptr,*ptrY,*ptrCb,*ptrCr;
+	unsigned short mcu_cols,mcu_rows;
+	unsigned int i,j;
+	unsigned char *ptr,*ptrY,*ptrCb,*ptrCr;
 	
 	mcu_cols = s->mcu_cols[s->lc_flag];
 	mcu_rows = s->mcu_rows[s->lr_flag];
